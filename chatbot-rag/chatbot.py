@@ -25,7 +25,7 @@ if not OPENAI_API_KEY:
 
 # create OpenAI instance
 embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, api_key=OPENAI_API_KEY)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0, api_key=OPENAI_API_KEY)
 
 # setup Chroma database to store the documents
 chroma = Chroma(
