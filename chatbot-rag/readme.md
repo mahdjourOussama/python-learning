@@ -12,7 +12,7 @@ chatbot-rag
 ├── api.py
 ├── chatbot.py
 ├── app.py
-├── requirements.in
+├── requirements.txt
 ├── README.md
 └── .env
 ```
@@ -25,7 +25,7 @@ chatbot-rag
 
 - **chatbot.py**: This file contains the core logic for the chatbot. It includes functions for retrieving documents, asking questions, storing documents, and parsing PDF files. It integrates with Langchain and OpenAI's API to provide responses based on the uploaded documents.
 
-- **requirements.in**: This file lists the required Python packages for the project, including FastAPI, Langchain, and other dependencies necessary for running the chatbot.
+- **requirements.txt**: This file lists the required Python packages for the project, including FastAPI, Langchain, and other dependencies necessary for running the chatbot.
 
 - **README.md**: This file provides documentation for the project, including an overview, setup instructions, and usage guidelines.
 
@@ -36,7 +36,7 @@ chatbot-rag
 To run the project, first install the required dependencies. You can do this by navigating to the project directory and running the following command:
 
 ```sh
-pip install -r requirements.in
+pip install -r requirements.txt
 ```
 
 ## Running the Application
