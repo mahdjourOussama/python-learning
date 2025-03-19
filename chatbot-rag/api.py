@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 # create FastAPI instance
 app = FastAPI(
     title="Chatbot RAG",
-    description="A simple chatbot using OpenAI's GPT-3 model. to enable asking questions and getting answers based on the uploaded document.",
+    description="A simple chatbot using OpenAI. to enable asking questions and getting answers based on the uploaded document.",
     version="0.1",
 )
 

@@ -1,4 +1,4 @@
-# RAG Chatbot Education Project
+# RAG Chatbot
 
 ## Overview
 
@@ -9,8 +9,9 @@ This educational project aims to help learners understand how to create a Retrie
 ```plaintext
 chatbot-rag
 
-├── app.py
+├── api.py
 ├── chatbot.py
+├── app.py
 ├── requirements.in
 ├── README.md
 └── .env
@@ -18,7 +19,9 @@ chatbot-rag
 
 ### File Descriptions
 
-- **app.py**: This file contains the FastAPI server implementation. It defines the API endpoints for uploading documents, searching documents, and asking questions to the chatbot. It also includes request and response models for structured data handling.
+- **api.py**: This file contains the FastAPI server implementation. It defines the API endpoints for uploading documents, searching documents, and asking questions to the chatbot. It also includes request and response models for structured data handling.
+
+- **app.py**: This file contains the Streamlit application implementation. It defines the the user interface to enable users to use the chatbot api. it allows for upload pdf files and chat with the ai about them.
 
 - **chatbot.py**: This file contains the core logic for the chatbot. It includes functions for retrieving documents, asking questions, storing documents, and parsing PDF files. It integrates with Langchain and OpenAI's API to provide responses based on the uploaded documents.
 
@@ -41,10 +44,11 @@ pip install -r requirements.in
 After installing the requirements, you can start the FastAPI server by executing the following command:
 
 ```sh
-uvicorn src.app:app --reload
+fastpai run api.py # this run the api server
+streamlit run app.py # this run the web application
 ```
 
-This will run the application in development mode, allowing you to access the API at `http://127.0.0.1:8000`.
+This will run the application in development mode, allowing you to access the API at `http://127.0.0.1:8000`. and for the application will run on `http://127.0.0.1:8000`.
 
 ## Usage
 
