@@ -24,7 +24,7 @@ if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY is not set")
 
 # create OpenAI instance
-embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
+embeddings = OpenAIEmbeddings(model="text-embedding-3-large", api_key=OPENAI_API_KEY)
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0, api_key=OPENAI_API_KEY)
 
 # setup Chroma database to store the documents

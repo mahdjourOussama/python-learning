@@ -6,3 +6,4 @@ langchain_core
 langchain_community
 pypdf
 streamlit
+python-dotenv

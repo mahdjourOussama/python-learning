@@ -1,0 +1,18 @@
+[project]
+name = "chatbot-rag"
+version = "0.1.0"
+description = "RAG cha tbot that uses OpenAI "
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "langchain>=0.3.25",
+    "langchain-chroma>=0.2.3",
+    "langchain-community>=0.3.24",
+    "langchain-core>=0.3.59",
+    "langchain-openai>=0.3.16",
+    "openai>=1.78.1",
+    "pypdf>=5.5.0",
+    "python-dotenv>=1.1.0",
+    "streamlit>=1.45.1",
+]
