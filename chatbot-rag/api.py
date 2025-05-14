@@ -2,7 +2,7 @@
 
 # import required libraries
 from fastapi import FastAPI, UploadFile
-from chatbot import retrieve_document, store_document, parse_pdf, ask_question
+from .chatbot import retrieve_document, store_document, parse_pdf, ask_question
 from pydantic import BaseModel
 from typing import List
 import logging

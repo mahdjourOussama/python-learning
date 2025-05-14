@@ -14,8 +14,9 @@ This tutorial will guide you step-by-step through building a full-stack Retrieva
 6. [Implementing the FastAPI Server (`api.py`)](#implementing-the-fastapi-server-apipy)
 7. [Creating the Streamlit Application (`app.py`)](#creating-the-streamlit-application-apppy)
 8. [Running the Application](#running-the-application)
-9. [Conclusion](#conclusion)
-10. [Further Reading](#further-reading)
+9. [demo](#demo-using-the-chatbot-rag-with-example-images)
+10. [Conclusion](#conclusion)
+11. [Further Reading](#further-reading)
 
 ---
 
@@ -453,6 +454,30 @@ streamlit run app.py
 - The Streamlit app will run at `http://localhost:8501` by default
 
 ---
+
+## Demo: Using the Chatbot RAG (with Example Images)
+
+To help you understand how to use the RAG chatbot, this section provides a step-by-step walkthrough with example screenshots from the [`chatbot-rag/images`](chatbot-rag/images/) folder.
+
+### 1. Uploading PDF Documents
+
+Start by uploading one or more PDF files that the chatbot will use to answer your questions. On the Streamlit web interface, click the "Upload your PDF docs" button and select your files.
+
+![Uploading a PDF document](images/file-upload.png)
+
+![Progress Uploading a PDF document](images/file-upload-progress.png)
+Once uploaded, you should see a confirmation message indicating that your files were uploaded successfully.
+
+![Finished Uploading a PDF document](images/file-upload-finished.png)
+
+### 2. Asking a Question
+
+After uploading your documents, you can interact with the chatbot using the chat input at the bottom of the page. Type your question related to the content of your uploaded PDFs and press Enter.
+
+![Asking Chatbot question](images/asking-question.png)
+
+The chatbot will process your question, retrieve relevant information from your documents, and display an answer in the chat window.
+![Chatbot answering a question](images/chatbot-answer.png)
 
 ## Conclusion
 
