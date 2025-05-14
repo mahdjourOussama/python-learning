@@ -441,7 +441,7 @@ if query:
 ### 1. Start the FastAPI Server
 
 ```sh
-uvicorn api:app --reload
+fastapi dev api.py #if you want to run for prodcution run fastapi run api.py
 ```
 
 ### 2. Run the Streamlit Application
