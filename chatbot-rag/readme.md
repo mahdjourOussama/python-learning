@@ -7,14 +7,14 @@ This educational project aims to help learners understand how to create a Retrie
 ## Project Structure
 
 ```plaintext
-chatbot-rag
-
-├── api.py
-├── chatbot.py
-├── app.py
-├── requirements.txt
-├── README.md
-└── .env
+chatbot-rag/
+├── data/                # Directory to hold the local vector database
+├── api.py               # FastAPI server
+├── app.py               # Streamlit web application
+├── chatbot.py           # Core chatbot logic
+├── requirements.txt     # Python dependencies
+├── README.md            # Project documentation
+└── .env                 # Environment variables (e.g., API keys)
 ```
 
 ### File Descriptions
@@ -35,9 +35,38 @@ chatbot-rag
 
 To run the project, first install the required dependencies. You can do this by navigating to the project directory and running the following command:
 
+**Using `venv`:**
+
 ```sh
-pip install -r requirements.txt
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
+
+**Using `conda`:**
+
+```sh
+conda create -n chatbot-rag python=3.11
+conda activate chatbot-rag
+```
+
+**Using `uv`:**
+
+```sh
+uv init
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+```
+
+## Configuring Environment Variables
+
+To keep sensitive information like API keys secure, store them in a `.env` file. This file should **not** be committed to version control.
+
+Create a `.env` file in your project root and add your OpenAI API key:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+---
 
 ## Running the Application
 
@@ -56,6 +85,30 @@ This will run the application in development mode, allowing you to access the AP
 - **Search Documents**: Use the `/documents/{query}` endpoint to search for documents based on a specific query.
 - **Ask Questions**: Use the `/ask` endpoint to ask questions to the chatbot based on the uploaded documents.
 
+## Demo: Using the Chatbot RAG (with Example Images)
+
+To help you understand how to use the RAG chatbot, this section provides a step-by-step walkthrough with example screenshots from the [`chatbot-rag/images`](chatbot-rag/images/) folder.
+
+### 1. Uploading PDF Documents
+
+Start by uploading one or more PDF files that the chatbot will use to answer your questions. On the Streamlit web interface, click the "Upload your PDF docs" button and select your files.
+
+![Uploading a PDF document](images/file-upload.png)
+
+![Progress Uploading a PDF document](images/file-upload-progress.png)
+Once uploaded, you should see a confirmation message indicating that your files were uploaded successfully.
+
+![Finished Uploading a PDF document](images/file-upload-finished.png)
+
+### 2. Asking a Question
+
+After uploading your documents, you can interact with the chatbot using the chat input at the bottom of the page. Type your question related to the content of your uploaded PDFs and press Enter.
+
+![Asking Chatbot question](images/asking-question.png)
+
+The chatbot will process your question, retrieve relevant information from your documents, and display an answer in the chat window.
+![Chatbot answering a question](images/chatbot-answer.png)
+
 ## Conclusion
 
 This project serves as a comprehensive guide for building a RAG chatbot using modern technologies. It provides hands-on experience with FastAPI, Langchain, and OpenAI's language model, making it an excellent resource for educational purposes.
@@ -63,5 +116,5 @@ This project serves as a comprehensive guide for building a RAG chatbot using mo
 ## Author
 
 - **LinkedIn**: [Eng. Oussama MAHDJOUR](https://www.linkedin.com/in/oussamamahdjour/)
-- **Email**: [mahdjouroussama@gmail.com](mailto:mahdjouroussama@gmail.com)
+- **Email**: [dev.mahdjour.oussama@gmail.com](mailto:dev.mahdjour.oussam@gmail.com)
 - **GitHub**: [Oussama Mahdjour](https://github.com/mahdjourOussama)
